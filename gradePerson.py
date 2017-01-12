@@ -55,8 +55,10 @@ class GradePerson():
 			fout = open("names-graded.txt", 'w')
 			for person in resList:
 				strout = "%s %s %s\n" % (person[0], person[1], str(person[2]))
+				print  "%s %s %s\n" % (person[0], person[1], str(person[2]))
 				fout.write(strout)
 			fout.close()
+			print "Finished: created names-graded.txt"
 		except IndexError:
 			logging.error("input file format error, check input formatting.")
 			sys.exit(0)
