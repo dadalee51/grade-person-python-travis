@@ -6,4 +6,6 @@ python:
   # command to install dependencies
 #install: "pip install -r requirements.txt"
 # command to run tests
-script: python test.py names.txt
+script: 
+  - python gradePerson.py names.txt
+  - python gradePerson_test.py
