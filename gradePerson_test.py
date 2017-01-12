@@ -2,7 +2,11 @@ import unittest
 from gradePerson import GradePerson
 class TestGradePerson(unittest.TestCase):
 
-	gp = GradePerson()
+	def setUp(self):
+		self.gp = GradePerson()
+
+	def tearDown(self):
+		pass
 
 	def test_compareOrder_eq(self):
 		self.assertEqual(self.gp.compOrd(["ABC","DEF",100], ["ABC","DEF",100]), 0)
